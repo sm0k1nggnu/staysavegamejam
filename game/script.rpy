@@ -10,6 +10,16 @@ define mp = Character ("[y]", kind=nvl, color="#B3A400")
 # Text when making choices
 define m = Character("You")
 
+#Sounds
+define audio.incoming = "audio/incoming_message_onphone.mp3"
+define audio.outgoing = "audio/outgoing_message_onphone.mp3"
+define audio.supermarkt = "audio/supermarktsong_Hintergrundmusik_im_Loop.mp3"
+define audio.logo = "audio/Testspace_Logosound.mp3"
+define audio.phonevibr = "audio/vibrieren_wenn_Telefon_auftaucht.mp3"
+define audio.obst = "audio/Obst_wenn_mit_obst_interagiert_wird.mp3"
+define audio.nudeln = "audio/Nudeln_wenn_mit_nudeln_interagiert_wird.mp3"
+define audio.kasse = "audio/kasse_wennEtwas_Final_Gekauft_wird.mp3"
+
 # Images
 
 init:
@@ -38,13 +48,12 @@ define adv_menu = menu
 # The game starts here.
 
 label start:
-
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
     scene scene1
-    play music "audio/supermarktsong.mp3"
+    play music supermarkt
     $ y = renpy.input("What's your name?")
     if y == "":
         "Please enter a name"
@@ -63,23 +72,23 @@ label start:
 
     hide character
 
+    play sound phonevibr
     show phone
 
     # These display lines of dialogue.
-    play music "audio/supermarktsong.mp3"
-    play sound "audio/incoming_message_onphone.mp3"
+    play sound incoming
     op "Thank you for everything. Since I can´t go outside it´s kinda hard for me to get groceries."
 
-    play sound "audio/outgoing_message_onphone.mp3"
+    play sound outgoing
     mp "No biggie. I just wanted to help. So, how are ya?"
 
-    play sound "audio/incoming_message_onphone.mp3"
+    play sound incoming
     op "I'm feeling sick for days..."
 
-    play sound "audio/incoming_message_onphone.mp3"
+    play sound incoming
     op "My family can't help me now and so being stuck in this apartment is hard."
 
-    play sound "audio/outgoing_message_onphone.mp3"
+    play sound outgoing
     mp "Sorry to hear..."
 
     menu:
@@ -94,10 +103,10 @@ label heygoing:
 
     mp "Hey! I'm heading out to the supermarket to buy groceries. Do you need something?"
 
-    play sound "audio/incoming_message_onphone.mp3"
+    play sound incoming
     op "Ahoy! How are you doing? Yes, in fact I need a few things."
 
-    play sound "audio/incoming_message_onphone.mp3"
+    play sound incoming
     op "Uhm... Can you get me some fruits? I need a bunch for my breakfast."
 
     jump buyfruit
@@ -106,10 +115,10 @@ label needsmth:
 
     mp "Going out to buy some stuff. Need something?"
 
-    play sound "audio/incoming_message_onphone.mp3"
+    play sound incoming
     op "Yeah. Wait a minute and let me check... I'll text you."
 
-    play sound "audio/incoming_message_onphone.mp3"
+    play sound incoming
     op "Uhm... Can you get me some fruits? I need a bunch for my breakfast."
 
     jump buyfruit
@@ -118,10 +127,10 @@ label bringstuff:
 
     mp "I'm at the mall and if you want I can bring you some stuff."
 
-    play sound "audio/incoming_message_onphone.mp3"
+    play sound incoming
     op "Cool! Let me just check!"
 
-    play sound "audio/incoming_message_onphone.mp3"
+    play sound incoming
     op "Uhm... Can you get me some fruits? I need a bunch for my breakfast."
 
     jump buyfruit
@@ -140,7 +149,7 @@ label favorites:
 
     mp "Sure! What kind do you want? I love me some apples, they are my favorite."
 
-    play sound "audio/incoming_message_onphone.mp3"
+    play sound incoming
     op "Thank you! Something fresh would be good."
 
     hide phone
@@ -153,7 +162,7 @@ label what:
 
     mp "Ok. What do you want?"
 
-    play sound "audio/incoming_message_onphone.mp3"
+    play sound incoming
     op "I don't know, can you get me something easy and quick to eat?"
 
     hide phone
@@ -166,7 +175,7 @@ label getsome:
 
     mp "Yeah. I get you some."
 
-    play sound "audio/incoming_message_onphone.mp3"
+    play sound incoming
     op "Thanks..."
 
     hide phone
@@ -186,7 +195,7 @@ label scene02:
 
     show phone
 
-    play sound "audio/incoming_message_onphone.mp3"
+    play sound incoming
     op "Please get me some X."
 
     hide phone
@@ -204,7 +213,7 @@ label buybanana:
     menu:
         "Yes, I'll take the bananas.":
             $ choice1 = "banana"
-            play sound "audio/Obst.mp3"
+            play sound obst
             "You put the banana in your basket."
             jump scene03
         "No, let's take another look.":
@@ -219,7 +228,7 @@ label buyapple:
     menu:
         "Yes, I'll take the apples.":
             $ choice1 = "apple"
-            play sound "audio/Obst.mp3"
+            play sound obst
             "You put the apples in your basket."
             jump scene03
         "No, let's take another look.":

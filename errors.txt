@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 66: u'hovered' is not a keyword argument or valid child for the imagemap statement.
-    hovered "scene01/Scene1_Aisle_ON.png"
-           ^
+File "game/script.rpy", line 5: python block expects a non-empty block.
+    init python:
+                ^
+
+File "game/script.rpy", line 6: expected statement.
+    def low_beep(event, **kwargs):
+                ^
+
+File "game/script.rpy", line 12: expected statement.
+    def mid_beep(event, **kwargs):
+                ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Mar 28 15:18:07 2020
+Sat Mar 28 20:39:27 2020
