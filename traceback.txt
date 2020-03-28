@@ -1,22 +1,42 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 140, in script
-SyntaxError: invalid syntax (script.rpy, line 140)
+  File "game/script.rpy", line 85, in script
+    menu:
+IOError: Couldn't find file 'audio/supermarktsong.mp3'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 140, in script
-  File "/Volumes/renpy-7.3.5-sdk/renpy-7.3.5-sdk/renpy/ast.py", line 1832, in execute
-    if renpy.python.py_eval(condition):
-  File "/Volumes/renpy-7.3.5-sdk/renpy-7.3.5-sdk/renpy/python.py", line 2057, in py_eval
-    code = py_compile(code, 'eval')
-  File "/Volumes/renpy-7.3.5-sdk/renpy-7.3.5-sdk/renpy/python.py", line 692, in py_compile
-    raise e
-SyntaxError: invalid syntax (script.rpy, line 140)
+  File "game/script.rpy", line 85, in script
+    menu:
+  File "/Volumes/renpy-7.3.5-sdk/renpy-7.3.5-sdk/renpy/ast.py", line 1628, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "/Volumes/renpy-7.3.5-sdk/renpy-7.3.5-sdk/renpy/exports.py", line 990, in menu
+    rv = renpy.store.menu(new_items)
+  File "/Volumes/renpy-7.3.5-sdk/renpy-7.3.5-sdk/renpy/exports.py", line 1226, in display_menu
+    rv = renpy.ui.interact(mouse='menu', type=type, roll_forward=roll_forward)
+  File "/Volumes/renpy-7.3.5-sdk/renpy-7.3.5-sdk/renpy/ui.py", line 297, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Volumes/renpy-7.3.5-sdk/renpy-7.3.5-sdk/renpy/display/core.py", line 2702, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/Volumes/renpy-7.3.5-sdk/renpy-7.3.5-sdk/renpy/display/core.py", line 3380, in interact_core
+    renpy.audio.audio.periodic()
+  File "/Volumes/renpy-7.3.5-sdk/renpy-7.3.5-sdk/renpy/audio/audio.py", line 1060, in periodic
+    six.reraise(exc[0], exc[1], exc[2])
+  File "/Volumes/renpy-7.3.5-sdk/renpy-7.3.5-sdk/renpy/audio/audio.py", line 1038, in periodic_thread_main
+    periodic_pass()
+  File "/Volumes/renpy-7.3.5-sdk/renpy-7.3.5-sdk/renpy/audio/audio.py", line 979, in periodic_pass
+    c.periodic()
+  File "/Volumes/renpy-7.3.5-sdk/renpy-7.3.5-sdk/renpy/audio/audio.py", line 457, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "/Volumes/renpy-7.3.5-sdk/renpy-7.3.5-sdk/renpy/audio/audio.py", line 73, in load
+    rv = renpy.loader.load(fn)
+  File "/Volumes/renpy-7.3.5-sdk/renpy-7.3.5-sdk/renpy/loader.py", line 576, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'audio/supermarktsong.mp3'.
 
 Darwin-19.3.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
 TESTSPACE 1.0
-Sat Mar 28 17:19:06 2020
+Sat Mar 28 20:31:14 2020
