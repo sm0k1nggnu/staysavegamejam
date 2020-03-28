@@ -62,7 +62,12 @@ label start:
 
     hide phone
 
+    window hide
+
     # Szene 'Go to the fruit aisle'
+
+label entrance:
+    call screen entrance
 
 label scene02:
     scene scene2
@@ -132,15 +137,15 @@ label buyavocado:
             jump scene02_2
 
 label scene03:
-    if choice1 = "1":
+    if choice1 == "1":
         "Now that I bought some bananas, off to the next"
     $ right += 1
 
-    if choice1 = "2":
+    if choice1 == "2":
         "Now that I got some apples, let's get some X"
     $ right += 1
 
-    if choice1 = "3":
+    if choice1 == "3":
         "I took some of the avocados. Time to get X"
     $ right += 1
 
