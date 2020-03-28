@@ -34,3 +34,51 @@
         xpos 1366
         ypos 308
         hover "scene02/Scene2_Avocado_ON.png" action Jump("buyavocado")
+
+ screen prescene03():
+    imagemap:
+        ground "scene03/Scene3_BG_Placehold.png"
+        hotspot(0, 0, 1920, 1080) action Jump("scene03")
+
+ screen scene03():
+    imagemap:
+        ground "scene03/Scene3_BG_Placehold.png"
+    imagebutton:
+        idle "scene03/Scene3_Wholegrain_OFF.png"
+        xpos 252
+        ypos 360
+        hover "scene03/Scene3_Wholegrain_ON.png" action Jump("buywholegrain")
+    imagebutton:
+        idle "scene03/Scene3_Normal_Placehold.png"
+        xpos 821
+        ypos 365
+        hover "scene02/Scene2_Apple_ON.png" action Jump("buynormal")
+    imagebutton:
+        idle "scene03/Scene3_Glutenfree_Placehold.png"
+        xpos 1322
+        ypos 323
+        hover "scene02/Scene2_Avocado_ON.png" action Jump("buyglutenfree")
+
+ screen prescene04():
+    imagemap:
+        ground "scene03/Scene3_BG_Placehold.png"
+        hotspot(0, 0, 1920, 1080) action Jump("scene04")
+
+ screen scene04():
+    imagemap:
+        ground "scene03/Scene3_BG_Placehold.png"
+    imagebutton:
+        idle "scene03/Scene3_Wholegrain_OFF.png"
+        xpos 252
+        ypos 360
+        hover "scene03/Scene3_Wholegrain_ON.png" action Jump("buycowmilk")
+    imagebutton:
+        idle "scene03/Scene3_Normal_Placehold.png"
+        xpos 821
+        ypos 365
+        hover "scene02/Scene2_Apple_ON.png" action Jump("buyalmondmilk")
+    imagebutton:
+        idle "scene03/Scene3_Glutenfree_Placehold.png"
+        xpos 1322
+        ypos 323
+        hover "scene02/Scene2_Avocado_ON.png" action Jump("buyoatmilk")

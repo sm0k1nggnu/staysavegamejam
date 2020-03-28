@@ -492,7 +492,7 @@ style return_button_text is navigation_button_text
 
 style game_menu_outer_frame:
     bottom_padding 45
-    top_padding 180
+    top_padding 100
 
     background "gui/overlay/game_menu.png"
 
@@ -501,7 +501,7 @@ style game_menu_navigation_frame:
     yfill True
 
 style game_menu_content_frame:
-    left_margin 60
+    left_margin 330
     right_margin 30
     top_margin 15
 
@@ -647,12 +647,6 @@ screen preferences():
                             if config.sample_sound:
                                 textbutton _("Test") action Play("sound", config.sample_sound)
 
-
-                    if config.has_voice:
-                        label _("Voice Volume")
-
-                        hbox:
-                            bar value Preference("voice volume")
 
                             if config.sample_voice:
                                 textbutton _("Test") action Play("voice", config.sample_voice)
