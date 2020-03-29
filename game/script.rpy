@@ -112,7 +112,7 @@ label start:
             jump bringstuff
 
 label heygoing:
-
+    play sound outgoing
     mp "Hey! I'm heading out to the supermarket to buy groceries. Do you need something?"
 
     play sound incoming
@@ -136,7 +136,7 @@ label needsmth:
     jump buyfruit
 
 label bringstuff:
-
+    play sound outgoing
     mp "I'm at the supermarket and if you want I can bring you some stuff."
 
     play sound incoming
@@ -158,7 +158,7 @@ label buyfruit:
             jump getsome
 
 label favorites:
-
+    play sound outgoing
     mp "Sure! What kind do you want? I love me some apples, they are my favorite."
 
     play sound incoming
@@ -171,7 +171,7 @@ label favorites:
     jump scene01
 
 label what:
-
+    play sound outgoing
     mp "Ok. What do you want?"
 
     play sound incoming
@@ -184,7 +184,7 @@ label what:
     jump scene01
 
 label getsome:
-
+    play sound outgoing
     mp "Yeah. I get you some."
 
     play sound incoming
@@ -273,6 +273,7 @@ label scene02end:
     $ right += 1
 
     show phone
+    play sound outgoing
     mp "I got your fruits. I hope you like them. What do you need next? :D"
 
     play sound incoming
@@ -288,6 +289,7 @@ label scene02end:
 
 label goodidea:
     show phone
+    play sound outgoing
     mp "Getting pasta is probably a good idea when you can't get out that much."
 
     play sound incoming
@@ -299,6 +301,7 @@ label goodidea:
 
 label getbetter:
     show phone
+    play sound outgoing
     mp "That sucks... hope you get better soon. Making pasta seems like a good idea."
 
     play sound incoming
@@ -310,6 +313,7 @@ label getbetter:
 
 label kk:
     show phone
+    play sound outgoing
     mp "kk"
 
     play sound incoming
@@ -400,22 +404,27 @@ label scene03end:
 
 label pasta1:
     show phone
+    play sound outgoing
     mp "Hey! I got you some pasta. Hope you'll like them, didn't exactly know which ones to get."
 
+    play sound incoming
     op "Thank you very much. I know...  but that's the cool part about pasta. Endless possibilities. By the way, can you get me some milk?"
     jump prescene04
 
 label pasta2:
     show phone
+    play sound outgoing
     mp "Bought some pasta for you. Wasn't easy to choose."
-
+    play sound incoming
     op "Thanks! Do you mind to buy me a box of milk?"
     jump prescene04
 
 label pasta3:
     show phone
+    play sound outgoing
     mp "Got your pasta. What's next?"
 
+    play sound incoming
     op "I am in need of some milk."
     jump prescene04
 
@@ -500,23 +509,29 @@ label scene04end:
 
 label milk1:
     show phone
+    play sound outgoing
     mp "Got milk? Yes, you got milk! :)"
 
+    play sound incoming
     op "Yass! Thank you for your help. I love to eat rice pudding when I'm feeling down and you need milk for that. If you want, I can make you some sometime. "
     hide phone
     jump scene05
 
 label milk2:
     show phone
+    play sound outgoing
     mp "Hey! I got the milk you asked for."
 
+    play sound incoming
     op "Thanks! Hope it's not oat milk, does't get well with my beloved rice pudding."
     hide phone
     jump scene05
 
 label milk3:
+    play sound outgoing
     mp "Got milk! :D"
 
+    play sound incoming
     op "Thanks! :D"
     jump scene05
 
@@ -539,10 +554,13 @@ label scene05:
 label bagdrop1:
     show phoneblue
 
+    play sound outgoing
     mp "Hey! I dropped the bag right in front of your door. :D Happy to help out, just hit me up if you need anything else."
 
+    play sound incoming
     op "Once again: Thank you! It's so nice of you to help someone you haven't even met once. No one else of the neighbours offered any help. "
 
+    play sound outgoing
     mp "No biggie! :D"
 
     hide phone
@@ -553,10 +571,13 @@ label bagdrop2:
 
     show phoneblue
 
+    play sound outgoing
     mp "Got all the things you wanted and left the bag by your door. Feel free to ask again if you need anything."
 
+    play sound incoming
     op "Thank you very much and I would be happy to give something back for all your help. Would you like to order some food together sometimes next week?"
 
+    play sound outgoing
     mp "Sounds great and thanks! No biggie!"
     
     hide phone
@@ -566,10 +587,13 @@ label bagdrop2:
 label bagdrop3:
     show phoneblue
 
+    play sound outgoing
     mp "Dropped the bag by your door."
 
+    play sound incoming
     op "Thank you! Nice of you to help."
 
+    play sound outgoing
     mp "No biggie. ;)"
     hide phone
 
