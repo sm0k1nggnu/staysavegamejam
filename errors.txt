@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 5: python block expects a non-empty block.
-    init python:
-                ^
-
-File "game/script.rpy", line 6: expected statement.
-    def low_beep(event, **kwargs):
-                ^
-
-File "game/script.rpy", line 12: expected statement.
-    def mid_beep(event, **kwargs):
-                ^
+File "game/myscreens.rpy", line 14: expected a keyword argument or child statement.
+    "Right before you are a lot of different fruits and vegetables. The variety is plenty. You see three different kind that may fit the needs."
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Mar 28 20:39:27 2020
+Sun Mar 29 11:47:47 2020

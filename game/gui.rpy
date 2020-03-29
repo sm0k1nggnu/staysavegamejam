@@ -48,8 +48,8 @@ define gui.muted_color = '#512800'
 define gui.hover_muted_color = '#7a3d00'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = '#a76700'
-define gui.interface_text_color = '#a76700'
+define gui.text_color = '#694000'
+define gui.interface_text_color = '#694000'
 
 
 ## Fonts and Font Sizes ########################################################
@@ -137,8 +137,7 @@ define gui.dialogue_width = 1116
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
 define gui.dialogue_text_xalign = 0.0
-##Drop-Shadow
-define gui.dialogue_text_outlines = [ (0, "#ffffff", 1, 1) ]
+
 
 ## Buttons #####################################################################
 ##
@@ -361,11 +360,11 @@ define gui.history_text_xalign = 0.0
 ## The NVL-mode screen displays the dialogue spoken by NVL-mode characters.
 
 ## The borders of the background of the NVL-mode background window.
-define gui.nvl_borders = Borders(0, 150, 0, 30)
+define gui.nvl_borders = Borders(0, 300, 0, 30)
 
 ## The maximum number of NVL-mode entries Ren'Py will display. When more entries
 ## than this are to be show, the oldest entry will be removed.
-define gui.nvl_list_length = 6
+define gui.nvl_list_length = 5
 
 ## The height of an NVL-mode entry. Set this to None to have the entries
 ## dynamically adjust height.
@@ -378,21 +377,21 @@ define gui.nvl_spacing = 15
 ## The position, width, and alignment of the label giving the name of the
 ## speaking character.
 define gui.nvl_name_xpos = 350
-define gui.nvl_name_ypos = 20
+define gui.nvl_name_ypos = 17
 define gui.nvl_name_width = 100
 define gui.nvl_name_xalign = 1.0
 
 ## The position, width, and alignment of the dialogue text.
 define gui.nvl_text_xpos = 370
-define gui.nvl_text_ypos = 32
-define gui.nvl_text_width = 530
+define gui.nvl_text_ypos = 23
+define gui.nvl_text_width = 480
 define gui.nvl_text_xalign = 0.0
 
 ## The position, width, and alignment of nvl_thought text (the text said by the
 ## nvl_narrator character.)
 define gui.nvl_thought_xpos = 360
 define gui.nvl_thought_ypos = 0
-define gui.nvl_thought_width = 620
+define gui.nvl_thought_width = 480
 define gui.nvl_thought_xalign = 0.0
 
 ## The position of nvl menu_buttons.

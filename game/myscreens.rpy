@@ -1,22 +1,17 @@
- screen entrance():
+ screen scene01():
     text "Hello world"
     imagemap:
         ground "scene01/Scene1_BG.png"
-        hotspot(985, 378, 554, 589) action Jump("scene02")
+        hotspot(985, 378, 554, 589) action Jump("prescene02")
     imagebutton:
         idle "scene01/Scene1_Aisle_OFF.png"
-        xpos 921
-        ypos 340    
+        xpos 846
+        ypos 263  
         hover "scene01/Scene1_Aisle_ON.png"
-        action Jump("scene02")
+        action Jump("prescene02")
+
 
  screen scene02():
-    imagemap:
-        ground "scene02/Scene2_BG_ON.png"
-        hotspot(0, 0, 1920, 1080) action Jump("aisle")
-
-
- screen aisle():
     imagemap:
         ground "scene02/Scene2_BG_OFF.png"
     imagebutton:
@@ -35,50 +30,40 @@
         ypos 308
         hover "scene02/Scene2_Avocado_ON.png" action Jump("buyavocado")
 
- screen prescene03():
-    imagemap:
-        ground "scene03/Scene3_BG_Placehold.png"
-        hotspot(0, 0, 1920, 1080) action Jump("scene03")
-
  screen scene03():
     imagemap:
-        ground "scene03/Scene3_BG_Placehold.png"
+        ground "scene03/Scene3_BG_OFF.png"
     imagebutton:
         idle "scene03/Scene3_Wholegrain_OFF.png"
-        xpos 252
+        xpos 190
         ypos 360
         hover "scene03/Scene3_Wholegrain_ON.png" action Jump("buywholegrain")
     imagebutton:
-        idle "scene03/Scene3_Normal_Placehold.png"
-        xpos 821
+        idle "scene03/Scene3_Normal_OFF.png"
+        xpos 760
         ypos 365
-        hover "scene02/Scene2_Apple_ON.png" action Jump("buynormal")
+        hover "scene03/Scene3_Normal_ON.png" action Jump("buynormal")
     imagebutton:
-        idle "scene03/Scene3_Glutenfree_Placehold.png"
-        xpos 1322
+        idle "scene03/Scene3_Glutenfree_OFF.png"
+        xpos 1260
         ypos 323
-        hover "scene02/Scene2_Avocado_ON.png" action Jump("buyglutenfree")
-
- screen prescene04():
-    imagemap:
-        ground "scene03/Scene3_BG_Placehold.png"
-        hotspot(0, 0, 1920, 1080) action Jump("scene04")
+        hover "scene03/Scene3_Glutenfree_ON.png" action Jump("buyglutenfree")
 
  screen scene04():
     imagemap:
-        ground "scene03/Scene3_BG_Placehold.png"
+        ground "scene04/Scene4_BG_OFF.png"
     imagebutton:
-        idle "scene03/Scene3_Wholegrain_OFF.png"
-        xpos 252
-        ypos 360
-        hover "scene03/Scene3_Wholegrain_ON.png" action Jump("buycowmilk")
+        idle "scene04/Scene4_Cow_OFF.png"
+        xpos 395
+        ypos 255
+        hover "scene04/Scene4_Cow_ON.png" action Jump("buycowmilk")
     imagebutton:
-        idle "scene03/Scene3_Normal_Placehold.png"
-        xpos 821
-        ypos 365
-        hover "scene02/Scene2_Apple_ON.png" action Jump("buyalmondmilk")
+        idle "scene04/Scene4_Oat_OFF.png"
+        xpos 862
+        ypos 307
+        hover "scene04/Scene4_Oat_ON.png" action Jump("buyoatmilk")
     imagebutton:
-        idle "scene03/Scene3_Glutenfree_Placehold.png"
-        xpos 1322
-        ypos 323
-        hover "scene02/Scene2_Avocado_ON.png" action Jump("buyoatmilk")
+        idle "scene04/Scene4_Almond_OFF.png"
+        xpos 1255
+        ypos 293
+        hover "scene04/Scene4_Almond_ON.png" action Jump("buyalmondmilk")
